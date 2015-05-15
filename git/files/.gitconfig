@@ -1,0 +1,11 @@
+[core]
+    eol = lf
+    editor = vim
+    excludesfile = ~/.gitignore
+[user]
+    name = Andrey Ryaguzov
+    email = dev.aeryaguzov@gmail.com
+[pull]
+    rebase = true
+[push]
+    default = simple
