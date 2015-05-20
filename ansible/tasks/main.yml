@@ -1,0 +1,5 @@
+---
+- name: add ansible repo
+  apt_repository: repo='ppa:ansible/ansible' state=present
+- name: install ansible
+  apt: name='ansible' state=present
