@@ -3,3 +3,7 @@
   apt_repository: repo='ppa:ansible/ansible' state=present
 - name: install ansible
   apt: name='ansible' state=present
+- name: install python pycurl module
+  apt: name='python-pycurl' state=present
+- name: install python psycopg2 module
+  apt: name='python-psycopg2' state=present
