@@ -1,0 +1,3 @@
+---
+- name: install mongo shell
+  apt: name="mongodb-org-shell" state=present
