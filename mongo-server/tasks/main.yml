@@ -1,0 +1,3 @@
+---
+- name: install mongo server
+  apt: name="mongodb-org-server" state=present
