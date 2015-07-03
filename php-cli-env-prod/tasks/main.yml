@@ -1,0 +1,7 @@
+---
+- name: create php logs folder
+  file: path=/var/log/php state=directory owner=root group=root mode=0777
+- name: ensure php error log file exists
+  file: path=/var/log/php/err.log state=touch owner=root group=root mode=0777
+- name: install prod config
+  copy: src=php.ini dest=/etc/php5/cli/php.ini owner=root group=root mode=0755
