@@ -1,0 +1,5 @@
+---
+- name: install php dev
+  apt: name=php5-dev state=present
+- name: install php pear
+  apt: name=php-pear state=present
