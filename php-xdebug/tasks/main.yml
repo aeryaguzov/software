@@ -1,0 +1,5 @@
+---
+- name: install xdebug
+  apt: name=php5-xdebug state=present
+- name: configure xdebug
+  copy: src=xdebug.ini dest=/etc/php5/cli/conf.d/20-xdebug.ini
