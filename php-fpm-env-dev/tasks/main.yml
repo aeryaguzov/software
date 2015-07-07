@@ -1,0 +1,7 @@
+---
+- name: install dev config
+  copy: src=php.ini dest=/etc/php5/fpm/php.ini owner=root group=root mode=0755
+- name: install fpm config
+  copy: src=fpm.conf dest=/etc/php5/fpm/php-fpm.conf mode=755 owner=root group=root
+- name: install fpm pool config
+  copy: src=www.conf dest=/etc/php5/fpm/pool.d/www.conf mode=755 owner=root group=root
