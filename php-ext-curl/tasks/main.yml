@@ -1,0 +1,3 @@
+---
+- name: install curl ext for php
+  apt: name='php5-curl' state=present
