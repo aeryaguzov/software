@@ -1,0 +1,3 @@
+---
+- name: install mysql ext for php
+  apt: name=php5-mysqlnd state=present
