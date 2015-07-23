@@ -1,0 +1,8 @@
+---
+- name: apt key
+  apt_key: url=https://deb.nodesource.com/gpgkey/nodesource.gpg.key state=present
+- name: apt repository
+  apt_repository: repo='deb https://deb.nodesource.com/node_0.12/ trusty main' state=present
+  notify: update apt cache
+- name: install nodejs
+  apt: name=nodejs state=present
