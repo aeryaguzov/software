@@ -1,3 +1,8 @@
 ---
+- name: add postgres apt key
+  apt_key: url=https://www.postgresql.org/media/keys/ACCC4CF8.asc state=present
+- name: add postgres apt repository
+  apt_repository: repo='deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main' state=present
+  notify: update apt cache
 - name: install postgres client
   apt: name='postgresql-client' state=present
