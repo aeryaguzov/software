@@ -1,0 +1,12 @@
+---
+- name: install librabbitmq
+  apt: name=librabbitmq-dev state=present
+- name: install php amqp ext
+  shell: pecl install amqp creates=/usr/lib/php5/20131226/amqp.so
+- name: configure igbinary ext for CLI SAPI
+  copy: content='extension=amqp.so' dest=/etc/php5/cli/conf.d/amqp.ini mode=755 owner=root group=root
+- stat: path=/etc/php5/fpm/php.ini
+  register: fpm_installed
+- name: configure igbinary ext for FPM SAPI
+  copy: content='extension=amqp.so' dest=/etc/php5/fpm/conf.d/amqp.ini mode=755 owner=root group=root
+  when: fpm_installed.stat.exists is defined and fpm_installed.stat.exists
