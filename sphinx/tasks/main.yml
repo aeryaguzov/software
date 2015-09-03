@@ -1,0 +1,5 @@
+---
+- name: add sphinx repo
+  apt_repository: repo='ppa:builds/sphinxsearch-rel22' state=present
+- name: install sphinx
+  apt: name='sphinxsearch' state=present
