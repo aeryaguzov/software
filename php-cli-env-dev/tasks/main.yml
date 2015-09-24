@@ -2,7 +2,7 @@
 - name: install dev config
   copy: src=php.ini dest=/etc/php5/cli/php.ini owner=root group=root mode=0755
 - name: install composer
-  shell: curl -sS https://getcomposer.org/installer | php -d allow_url_fopen=On && sudo mv composer.phar /usr/local/bin/composer creates=/usr/local/bin/composer
+  shell: curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr/local/bin/composer creates=/usr/local/bin/composer
 # execute all composer global ops without sudo
 - name: install phpunit
   sudo: no
