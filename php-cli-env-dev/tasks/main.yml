@@ -7,3 +7,5 @@
 - name: install phpunit
   sudo: no
   shell: composer global require phpunit/phpunit creates=~/.composer/vendor/bin/phpunit
+- name: make phpunit global executable
+  file: src=/home/{{ansible_ssh_user}}/.composer/vendor/bin/phpunit path=/usr/local/bin/phpunit state=link
