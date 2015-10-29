@@ -1,3 +1,4 @@
 ---
 - name: install vundle plugins
+  sudo: no
   shell: vim +PluginInstall +qall
