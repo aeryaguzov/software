@@ -9,5 +9,3 @@
   apt: name='python-pycurl' state=present
 - name: install python psycopg2 module
   apt: name='python-psycopg2' state=present
-- name: install ssh config
-  copy: src=ssh_config dest=/home/{{ansible_ssh_user}}/.ssh/config
