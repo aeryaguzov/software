@@ -13,8 +13,7 @@ so the main goal of this roles collection is to be a "base" for other projects. 
 
 ## my skills presentation
 
-This roles collection contains only stuff I major in, 
-so if you are interested in my skills this repository can be a great place to start.
+This roles collection contains only stuff I major in, so if you are interested in my skills this repository is a great place to start.
 
 ## additional notes about roles
 
@@ -26,7 +25,7 @@ There are two ways to represent php setup
 
 - many small roles
  
-I prefer second way (IMO like Unix way), so you can see many roles starting with **"php-"**.
+I prefer second way (IMO like Unix way), so you can see many roles starting with "**php-**".
 
 The main roles are **php-cli** and **php-fpm** as they represent php SAPI setup, **php-ext-\*** represent php extensions.
 
@@ -37,4 +36,4 @@ There are also **php-{SAPI}-env-dev** and **php-{SAPI}-env-prod**, which represe
     ERROR 2006 (HY000): MySQL server has gone away
     
 Of course I know how to setup mysql server and I can work with it, my code executing some queries right now, 
-but I do not like to work with it. I do not like to work with subversion too.
+but I do not like to work with it. I do not like to work with **subversion** too.
