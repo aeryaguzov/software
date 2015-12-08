@@ -1,0 +1,11 @@
+---
+- name: install rabbitmq
+  apt: name='rabbitmq-server' state=present
+- name: check that management plugin is enabled
+  shell: rabbitmq-plugins list -m -E | grep rabbitmq_management
+  register: result
+  ignore_errors: true
+- name: enable rabbitmq management plugin if needed
+  shell: rabbitmq-plugins enable rabbitmq_management
+  when: result|failed
+  notify: restart rabbitmq
