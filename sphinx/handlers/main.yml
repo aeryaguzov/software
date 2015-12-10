@@ -1,0 +1,5 @@
+---
+- name: stop searchd
+  shell: searchd --stop
+- name: restart sphinxsearch
+  service: name=sphinxsearch state=restarted

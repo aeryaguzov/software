@@ -1,5 +1,17 @@
 ---
+#
+# Sphinx service is installed only in /etc/init (upstrart-only way)
+# This way has several disadvantages (ex. autocomplete for "sphinxsearch" does not work)
+# For BC and some people who do not know what upstart is and how its work, we create old-school init script in /etc/init.d
+#
 - name: add sphinx repo
   apt_repository: repo='ppa:builds/sphinxsearch-rel22' state=present
 - name: install sphinx
   apt: name='sphinxsearch' state=present
+  notify: stop searchd
+- name: remove service config defaults
+  file: path=/etc/default/sphinxsearch state=absent
+- name: remove service config from upstart
+  file: path=/etc/init/sphinxsearch.conf state=absent
+- name: install sphinxsearch init script
+  copy: src=sphinxsearch.sh dest=/etc/init.d/sphinxsearch mode=0755 owner=root group=root
