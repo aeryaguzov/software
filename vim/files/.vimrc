@@ -34,3 +34,5 @@ Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()
 filetype plugin indent on
+
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
