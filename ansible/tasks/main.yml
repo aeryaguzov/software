@@ -2,7 +2,7 @@
 - name: add ansible repo
   apt_repository: repo='ppa:ansible/ansible' state=present
 - name: install ansible
-  apt: name='ansible' state=present
+  apt: update_cache=yes name='ansible' state=present
 - name: install curl
   apt: name='curl' state=present
 - name: install python pycurl module

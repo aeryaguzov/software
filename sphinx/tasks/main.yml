@@ -7,7 +7,7 @@
 - name: add sphinx repo
   apt_repository: repo='ppa:builds/sphinxsearch-rel22' state=present
 - name: install sphinx
-  apt: name='sphinxsearch' state=present
+  apt: update_cache=yes name='sphinxsearch' state=present
   notify: stop searchd
 - name: remove service config defaults
   file: path=/etc/default/sphinxsearch state=absent
