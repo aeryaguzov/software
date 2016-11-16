@@ -2,8 +2,8 @@
 - name: install git
   apt: name=git state=present
 - name: create config file
-  sudo: no
+  become: false
   copy: src=.gitconfig dest=/home/{{ansible_ssh_user}}/.gitconfig
 - name: create global ignore config
-  sudo: no
+  become: false
   copy: src=.gitignore dest=/home/{{ansible_ssh_user}}/.gitignore
