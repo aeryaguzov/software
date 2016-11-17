@@ -2,6 +2,6 @@
 - name: apt key
   apt_key: url=https://deb.nodesource.com/gpgkey/nodesource.gpg.key state=present
 - name: apt repository
-  apt_repository: repo='deb https://deb.nodesource.com/node_4.x/ trusty main' state=present
+  apt_repository: repo='deb https://deb.nodesource.com/node_6.x/ trusty main' state=present
 - name: install nodejs
   apt: update_cache=yes name=nodejs state=present
