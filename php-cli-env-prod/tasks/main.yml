@@ -4,6 +4,4 @@
 - name: ensure php error log file exists
   file: path=/var/log/php/err.log state=touch owner=root group=root mode=0777
 - name: install production config
-  copy: src=php.ini dest=/etc/php5/cli/php.ini owner=root group=root mode=0755
-- name: install opcache production config
-  copy: src=opcache.ini dest=/etc/php5/fpm/conf.d/05-opcache.ini owner=root group=root mode=0755
+  copy: src=php.ini dest=/etc/php/7.0/cli/php.ini owner=root group=root mode=0755
