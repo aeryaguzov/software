@@ -1,3 +1,3 @@
 ---
 - name: install memcached ext for php
-  apt: name=php5-memcache state=present
+  apt: name=php-memcache state=present
