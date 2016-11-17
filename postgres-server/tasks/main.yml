@@ -1,9 +1,4 @@
 ---
 - name: install postgres server
-  apt: name='postgresql-9.4' state=present
-- name: create "test" database
-  sudo_user: postgres
-  postgresql_db: name=test
-- name: create "dev" user
-  sudo_user: postgres
-  postgresql_user: db=test name=dev password=1234
+  apt: name='postgresql-9.6' state=present
+# TODO create database and test user
