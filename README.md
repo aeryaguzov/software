@@ -28,10 +28,3 @@ I prefer second way (IMO like Unix way), so you can see many roles starting with
 The main roles are **php-cli** and **php-fpm** as they represent php SAPI setup, **php-ext-\*** represent php extensions.
 
 There are also **php-{SAPI}-env-dev** and **php-{SAPI}-env-prod**, which represents common configs for development and production environment respectively.
- 
-### where is mysql-server role ?
-
-    ERROR 2006 (HY000): MySQL server has gone away
-    
-Of course I know how to setup mysql server and I can work with it, my code executing some queries right now, 
-but I do not like to work with it. I do not like to work with **subversion** too.
