@@ -1,5 +1,7 @@
 # Software
 
+!IMPORTANT: this repository was used in 2015 and is no longer supported.
+
 Software stack represented as [ansible roles] (http://docs.ansible.com/ansible/playbooks_roles.html).
 
 The main idea of this repository is to have a **reusable base** for every project infrastructure.
